@@ -7,6 +7,11 @@ class addtocart{
         $DB=new DB();
         $this->db=$DB->connection();
     }
+    /*
+        check if the product already exists in the cart.
+        if it exists quantity and sum will be changed with the update method,
+        else add method will be used to add the product to the cart.
+     */
     public function check($product_id,$quantity,$sum){
         $query="SELECT * FROM cart WHERE product_id='$product_id'";
         $rows=$this->db->query($query);

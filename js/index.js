@@ -47,5 +47,6 @@ function addtocart(product_id,price){
             $('.alert').hide();
         },3000);
         $('.quan').html(parseInt($('.quan').html())+parseInt(quantity));
+        $('#summ').html(parseInt($('#summ').html())+parseInt(price));
     });
 }

@@ -1,5 +1,4 @@
 <?php
-
     require('./database/getproducts.php');
     $getproducts=new getproducts();
     $products=$getproducts->get();
